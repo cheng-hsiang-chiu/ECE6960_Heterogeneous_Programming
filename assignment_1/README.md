@@ -7,6 +7,8 @@ using threadpool implementations.
 ## Repository structure
 - src : source files
 - CMakeLists.txt : cmake file
+- 3rd-party : 3rd-party libraries
+- cmake : cmake file for Google benchmark 
 
 ## Build
 To build the executable, please follow the instructions below. The default compiler is g++.
@@ -22,10 +24,8 @@ To run the executable, please follow the instructions below.
 
 ```
 cd build
-./main M K N T
+./main
 ```
-M, K, and N are used to describe the matrices.
-Matrix A is of dimension N*K, B is of K*M, and C is of N*M.
-T is the number of threads used. 
 
 ## Experiment results
+The report is available [here(./PA1-report.pdf)]
