@@ -4,6 +4,16 @@
 This assignment is to improve the execution time performance of parallel matrix multiplication (C=A*B)
 using threadpool implementations.
 
+## Implementations
+There are six solutions implemented. They are
+- Sequential
+- Parallel with false sharing
+- Parallel without false sharing
+- Parallel with block matrix size
+- Parallel with decentralized queues
+- Parallel with decentralized queues and block matrix size
+
+
 ## Repository structure
 - src : source files
 - CMakeLists.txt : cmake file
