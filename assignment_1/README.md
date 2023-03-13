@@ -19,6 +19,7 @@ There are six solutions implemented. They are
 - CMakeLists.txt : cmake file
 - 3rd-party : 3rd-party libraries
 - cmake : cmake file for Google benchmark 
+- PA1-report.pdf : report
 
 ## Build
 To build the executable, please follow the instructions below. The default compiler is g++.
