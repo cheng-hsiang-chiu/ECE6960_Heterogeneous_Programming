@@ -28,7 +28,10 @@ mkdir build
 cd build
 cmake ../
 make
+cmake ../
+make
 ```
+***You need to cmake ../ and make twice to find the installed google benchmark libraries.***
 
 ## Run
 To run the executable, please follow the instructions below.

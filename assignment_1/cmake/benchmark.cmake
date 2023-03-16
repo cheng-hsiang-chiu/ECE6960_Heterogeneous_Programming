@@ -25,6 +25,9 @@ ExternalProject_Add(benchmark
   INSTALL_COMMAND    ${GB_INSTALL}
 )
 
+find_library(gbpath NAMES benchmark PATHS ${CMAKE_BINARY_DIR}/benchmark/build/lib ${CMAKE_BINARY_DIR}/benchmark/build/lib64)      
+
 add_library(gbenchmark STATIC IMPORTED)
-set_property(TARGET gbenchmark PROPERTY IMPORTED_LOCATION ${CMAKE_BINARY_DIR}/benchmark/build/lib/libbenchmark.a)
+#set_property(TARGET gbenchmark PROPERTY IMPORTED_LOCATION ${CMAKE_BINARY_DIR}/benchmark/build/lib/libbenchmark.a)
+set_property(TARGET gbenchmark PROPERTY IMPORTED_LOCATION ${gbpath})
 add_dependencies(gbenchmark benchmark)
