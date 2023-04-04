@@ -1,16 +1,10 @@
-# Programming Assignment 1 : Guided Scheduling
+# Programming Assignment 2 : Guided Scheduling
 
 ## What is this assignment about?
 This assignment is to implement a guided scheduling for parallel reduction.
-
-## Implementations
-There are six solutions implemented. They are
-- Sequential
-- Parallel with false sharing
-- Parallel without false sharing
-- Parallel with block matrix size
-- Parallel with decentralized queues
-- Parallel with decentralized queues and block matrix size
+In guided scheduling, chunk size is dynamic while using guided method,
+the size of a chunk is proportional to the number of unassigned iterations divided by the number of the threads,
+and the size will be decreased to chunk-size (but the last chunk could be smaller than chunk-size)
 
 
 ## Repository structure
