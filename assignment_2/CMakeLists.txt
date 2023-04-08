@@ -7,7 +7,7 @@ project(guided VERSION 1.0 LANGUAGES CXX)
 include (cmake/benchmark.cmake)
 
 set(CMAKE_CXX_COMPILER "g++")
-set(CMAKE_CXX_FLAGS "-std=c++17 -O3 -pthread")
+set(CMAKE_CXX_FLAGS "-std=c++17 -pthread -O2")
 # set(FM_3RD_PARTY_DIR ${PROJECT_SOURCE_DIR}/3rd-party)
 
 add_library(error_settings INTERFACE)

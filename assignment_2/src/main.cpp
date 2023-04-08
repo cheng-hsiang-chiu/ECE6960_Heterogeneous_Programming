@@ -12,13 +12,14 @@ static void benchmark_sequential_reduce(benchmark::State& s) {
   for (auto& v : vec) {
     v = ::rand()%10;
   }
-
+  
   // Timing loop
   for (auto _ : s) {
-    //int r = seq_reduce(vec, 100);
-    int r = std::accumulate(vec.begin(), vec.end(), 100, [](int a, int b){ return a+b; });
+    int r = seq_reduce(vec, 100);
+    //r = std::accumulate(vec.begin(), vec.end(), 100, [](int a, int b){ return a+b; });
     //std::cout << r << '\n';
   }
+  //std::cout << "r = " << r << '\n';
 }
 
 BENCHMARK(benchmark_sequential_reduce)
@@ -28,7 +29,7 @@ BENCHMARK(benchmark_sequential_reduce)
   ->Unit(benchmark::kMillisecond);
 
 
-/*
+
 // parallel reduction with static scheduling
 static void benchmark_parallel_reduce_static(benchmark::State& s) {
   size_t counts = s.range(0);
@@ -274,7 +275,7 @@ BENCHMARK(benchmark_parallel_reduce_guided)
   ->UseRealTime()
   ->Unit(benchmark::kMillisecond);
 
-*/
+
 
 BENCHMARK_MAIN();
 
